@@ -16,7 +16,7 @@ def colaboration(n,m):
     if n<m:
         return 0
     else:
-        return fact2(n)/(fact2((n-m))*fact2(m))
+        return int(fact2(n)/(fact2((n-m))*fact2(m)))
 
 
 

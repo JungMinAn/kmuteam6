@@ -1,8 +1,7 @@
 def factorial(k):
-    answer = 1
-    for i in range(1,k+1):
-        answer = answer*i
-    return answer
+    if k == 0:
+        return 1
+    return k*factorial(k-1)
 n = int(input('Enter n:'))
 m = int(input('Enter m:'))
 

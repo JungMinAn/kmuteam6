@@ -10,9 +10,15 @@ def factorial(n,m):
 def fact2(n):
     if n == 0:
         return 1
-    return n*factorial(n-1)
+    return n*fact2(n-1)
+
+def colaboration(n,m):
+    if n<m:
+        return 0
+    else:
+        return fact2(n)/(fact2((n-m))*fact2(m))
 
 
 
 print(factorial(n,m))
-print(fact2(n)/(fact2(n-m)*fact2(m)))
+print(colaboration(n,m))

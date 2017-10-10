@@ -29,6 +29,7 @@ def solution(n, m):
     answer = up/(down2*down1)
     return answer
 
-
-a = solution(5,3)
+n=int(input("n"))
+m=int(input("m"))
+a = solution(n,m)
 print(a)

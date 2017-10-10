@@ -1,20 +1,30 @@
-n = int(input("Enter number: "))
-def fibonacci(n):
+import time
+def fibo(n):
     if(n<=1):
         return n
     else:
-        return fibonacci(n-1) + fibonacci(n-2)
+        return fibo(n-1) + fibo(n-2)
 
-def fibonacci2(n):
+def iterfibo(n):
     a, b = 1, 1
     i = 0
     while i<n:
         if (i+1==n):
-            print(a)
+            return a
             break
         else:
             a, b = b, a+b
             i+=1
 
-print(fibonacci(n))
-fibonacci2(n)
+while True:
+    nbr = int(input("Enter a number: "))
+    if nbr == -1:
+        break
+    ts = time.time()
+    fibonumber = iterfibo(nbr)
+    ts = time.time() - ts
+    print("IterFibo(%d)=%d, time %.6f" %(nbr, fibonumber, ts))
+    ts = time.time()
+    fibonumber = fibo(nbr)
+    ts = time.time() - ts
+    print("Fibo(%d)=%d, time %.6f" %(nbr, fibonumber, ts))

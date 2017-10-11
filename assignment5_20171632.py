@@ -1,7 +1,4 @@
 import time
-import random
-numlist = []
-i = 0
 
 def fibo(n):
 	if n <= 1:
@@ -9,11 +6,11 @@ def fibo(n):
 	return fibo(n - 1) + fibo(n - 2)
 
 def iterfibo(n):
+	
     if n <= 1:
         return n
-    else:
+    for i in range(2, n+1):
         numlist.append(numlist[i-1] + numlist[i-2])
-    if i == n:
         return numlist[-1]
 
 while True:

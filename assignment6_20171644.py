@@ -153,7 +153,7 @@ class ScoreDB(QWidget):
         sortkey = "Name" if not sortkey else sortkey
         for i in sorted(self.scoredb, key=lambda person: person[sortkey]):
             for j in sorted(i):
-                sshowtext += str(i) + " = " + str(i[j]) + "    "
+                sshowtext += str(j) + " = " + str(i[j]) + "    "
             sshowtext += "\n"
         self.output.setText(sshowtext)
 

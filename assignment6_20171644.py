@@ -97,7 +97,6 @@ class ScoreDB(QWidget):
         for i in self.scoredb:
             if i['Name'] == delname:
                 self.scoredb.remove(i)
-        #self.scoredb[:] = [i for i in self.scoredb if i['Name' != delname]]
         self.showScoreDB()
 
     def find_clicked(self):

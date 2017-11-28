@@ -9,7 +9,7 @@ class Guess:
         self.tf = False
 
     def display(self):
-        print('Current:' + self.hiddenword +" ", end="")
+        print('Current:' + " ", end="")
         for i in range (0, len(self.hiddenword)):
             if self.hiddenword[i] in self.letterposition:
                 print(self.hiddenword[i], end="")
